@@ -23,7 +23,7 @@ app.post("/person", (req, res) => {
 });
 
 function start(port) {
-  app.listen(3001, () => console.log(`hello world`));
+  app.listen(port, () => console.log(`hello world ${port}`));
 }
 
 module.exports = {

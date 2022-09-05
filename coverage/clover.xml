@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1662367369822" clover="3.2.0">
-  <project timestamp="1662367369822" name="All files">
+<coverage generated="1662370555867" clover="3.2.0">
+  <project timestamp="1662370555867" name="All files">
     <metrics statements="11" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2" elements="15" coveredelements="12" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
     <file name="server.js" path="/Users/eyadmansour/Desktop/javascript_tasks401/express-server/server.js">
       <metrics statements="11" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
