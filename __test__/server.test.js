@@ -14,15 +14,16 @@ describe("API test", () => {
 });
 
 describe("API age server", () => {
+  const user = {
+    name: "eyad",
+    age: 25,
+    gender: "male",
+  };
+  const modifiedAge = user.age + 5;
   it("age test", async () => {
-    const res = await request.post("/person");
-    const user = {
-      name: "eyad",
-      age: 25,
-      gender: "male",
-    };
-    const modifiedAge = user.age + 5;
+    const res = await request.post("/person").send(user);
+
     expect(res.status).toEqual(201);
-    expect(res.text).toEqual(`age is 5 more years 30`);
+    expect(res.text).toEqual(`30`);
   });
 });
