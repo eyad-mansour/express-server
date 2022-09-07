@@ -2,6 +2,9 @@
 
 const express = require("express");
 const app = express();
+require("dotenv").config();
+const cors = require("cors");
+app.use(cors());
 app.use(express.json());
 // routs
 app.get("/", (req, res) => {
@@ -10,16 +13,14 @@ app.get("/", (req, res) => {
 
 app.post("/person", (req, res) => {
   //   const user = req.body;
-  //   const { name, age, gender } = req.query;
-  const user = {
-    name: "eyad",
-    age: 25,
-    gender: "male",
-  };
-  const modifiedAge = parseInt(user.age) + 5;
+  const { name, age, gender } = req.body;
+
+  const modifiedAge = parseInt(age) + 5;
+
+  res.status(201).send(modifiedAge.toString());
 
   //   res.status(201).send("created user");
-  res.status(201).send(`age is 5 more years ${modifiedAge}`);
+  // res.status(201).send(`${modifiedAge}`);
 });
 
 function start(port) {
